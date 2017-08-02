@@ -13,3 +13,4 @@ var server = http.createServer(function(req, res){
 });
 
 server.listen(3000);
+//INSTALANDO NPM e REFATORANDO O CODIGO COM EXPRESS

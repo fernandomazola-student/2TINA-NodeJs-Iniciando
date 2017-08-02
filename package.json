@@ -1,0 +1,27 @@
+{
+  "name": "pagina",
+  "version": "1.0.0",
+  "description": "Brincando com NodeJs",
+  "main": "pagina.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fernandomazola-student/2TINA-NodeJs-Iniciando.git"
+  },
+  "keywords": [
+    "node",
+    "aula",
+    "fiap"
+  ],
+  "author": "Fernando Mazola",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fernandomazola-student/2TINA-NodeJs-Iniciando/issues"
+  },
+  "homepage": "https://github.com/fernandomazola-student/2TINA-NodeJs-Iniciando#readme",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
