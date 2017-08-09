@@ -1,36 +1,45 @@
-var express = require('express');
+//CONFIGURAÇÃO DE FORMA MODULARIZADA
+var app = require('./config/server');
+var rotaHome = require('./app/routes/home');
+rotaHome(app);
 
-var app = express();
+//ROTA DE cadastrar
+var rotaCadastrar = require('./app/routes/cadastrar');
+rotaCadastrar(app);
 
-var msg = require('./mod_teste');
-//Engine de view mudou, agora será ejs
-app.set('view engine', 'ejs');
+//ROTA DE produtos
+var rotaProdutos = require('./app/routes/produtos');
+rotaProdutos(app);
 
-app.get('/esporte', function(req, res){
-  res.render("secao/esporte");
-  // res.send("<html><body>Página Inicial</body></html>");
-});
+//CONFIGURAÇÃO DA FORMA ANTIGA
+// var express = require('express');
+//
+// var app = express();
+//
+// var msg = require('./mod_teste');
+// //Engine de view mudou, agora será ejs
+// app.set('view engine', 'ejs');
 
-app.get('/', function(req, res){
-  res.render("home/index");
-  // res.send("<html><body>Página Inicial</body></html>");
-});
 
-app.get('/cadastrar', function(req, res){
-  res.render("admin/form_add_produto");
-  // res.send("<html><body>Página Inicial</body></html>");
-});
+//REFATORANDO CODIGO COM EXPRESS e EJS
+// app.get('/esporte', function(req, res){
+//   res.render("secao/esporte");
+//   // res.send("<html><body>Página Inicial</body></html>");
+// });
+//
+//
+//
+//
+//
+// app.get('/deletar', function(req, res){
+//   res.render("admin/form_delete_produto");
+//   // res.send("<html><body>Página Inicial</body></html>");
+// });
 
-app.get('/deletar', function(req, res){
-  res.render("admin/form_delete_produto");
-  // res.send("<html><body>Página Inicial</body></html>");
-});
+//ENVIADO ROTAS PARA APP > ROUTES
 
-app.get('/produtos', function(req, res){
-  res.render("produtos/produtos");
-  // res.send("<html><body>Página Inicial</body></html>");
-});
 
+//DE FORMA ANTIGA, SEM EJS, aqui estava renderizando o arquivo direto
 // app.get('/tecnologia', function(req, res){
 //   res.send("<html><body>Página de Tecnologia</body></html>");
 // });
@@ -54,7 +63,5 @@ app.get('/produtos', function(req, res){
 // });
 
 app.listen(3000,function(){
-  console.log(msg());
+  console.log('server on');
 });
-
-//REFATORANDO CODIGO COM EXPRESS
