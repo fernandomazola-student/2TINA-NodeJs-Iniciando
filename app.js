@@ -2,6 +2,7 @@ var express = require('express');
 
 var app = express();
 
+var msg = require('./mod_teste');
 //Engine de view mudou, agora será ejs
 app.set('view engine', 'ejs');
 
@@ -53,7 +54,7 @@ app.get('/produtos', function(req, res){
 // });
 
 app.listen(3000,function(){
-  console.log('Servidor ativo e rodando com Express!');
+  console.log(msg());
 });
 
 //REFATORANDO CODIGO COM EXPRESS
