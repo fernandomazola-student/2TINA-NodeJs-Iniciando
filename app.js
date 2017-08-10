@@ -11,6 +11,10 @@ rotaCadastrar(app);
 var rotaProdutos = require('./app/routes/produtos');
 rotaProdutos(app);
 
+//ROTA DE clientes
+var rotaClientes = require('./app/routes/clientes');
+rotaClientes(app);
+
 //CONFIGURAÇÃO DA FORMA ANTIGA
 // var express = require('express');
 //
