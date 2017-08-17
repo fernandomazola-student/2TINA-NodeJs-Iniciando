@@ -2,24 +2,26 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Lista de Produtos</title>
+    <title>Descrição do Produto</title>
   </head>
   <body>
-    <h2>Produtos</h2>
+    <h2>Produto</h2>
     <table>
       <thead>
       <tr>
         <td>ID</td>
         <td>Nome</td>
+        <td>Descrição</td>
       </tr>
     </thead>
       <tbody>
-      <% for(var i = 0; i < produtos.length; i++) {%>
+
       <tr>
-        <td><%= produtos[i].id_produto%></td>
-        <td><%= produtos[i].nome%></td>
+        <td><%= produto[0].id_produtos%></td>
+        <td><%= produto[0].nome%></td>
+        <td><%= produto[0].descricao%></td>
       </tr>
-      <% } %>
+
     </tbody>
     </table>
   </body>

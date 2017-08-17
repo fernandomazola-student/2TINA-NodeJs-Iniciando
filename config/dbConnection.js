@@ -1,5 +1,7 @@
 var mysql = require('mysql');
 
+
+//COLOCAMOS NOSSA FUNÇÃO DE CONEXAO EM UMA VARIAVEL
 var conecMySQL = function(){
 // var connection = mysql.createConnection({
   return mysql.createConnection({
