@@ -1,19 +1,29 @@
-//CONFIGURAÇÃO DE FORMA MODULARIZADA
 var app = require('./config/server');
-var rotaHome = require('./app/routes/home');
-rotaHome(app);
+app.listen(3000,function(){
+  console.log('server on');
+});
 
-//ROTA DE cadastrar
-var rotaCadastrar = require('./app/routes/cadastrar');
-rotaCadastrar(app);
 
-//ROTA DE produtos
-var rotaProdutos = require('./app/routes/produtos');
-rotaProdutos(app);
 
-//ROTA DE clientes
-var rotaClientes = require('./app/routes/clientes');
-rotaClientes(app);
+
+//CONFIGURAÇÃO DE FORMA MODULARIZADA
+
+//CONFIGURAÇÃO DAS ROTAS SEM CONSIGN
+// var app = require('./config/server');
+// var rotaHome = require('./app/routes/home');
+// rotaHome(app);
+//
+// //ROTA DE cadastrar
+// var rotaCadastrar = require('./app/routes/cadastrar');
+// rotaCadastrar(app);
+//
+// //ROTA DE produtos
+// var rotaProdutos = require('./app/routes/produtos');
+// rotaProdutos(app);
+//
+// //ROTA DE clientes
+// var rotaClientes = require('./app/routes/clientes');
+// rotaClientes(app);
 
 //CONFIGURAÇÃO DA FORMA ANTIGA
 // var express = require('express');
@@ -65,7 +75,3 @@ rotaClientes(app);
 //   mensagem += '</center>'
 //   res.send(mensagem);
 // });
-
-app.listen(3000,function(){
-  console.log('server on');
-});
