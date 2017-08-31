@@ -23,10 +23,10 @@ DROP TABLE IF EXISTS `produtos`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `produtos` (
-  `id_produto` int(11) NOT NULL AUTO_INCREMENT,
+  `id_produtos` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(45) DEFAULT NULL,
-  `descricao` varchar(160) DEFAULT NULL,
-  PRIMARY KEY (`id_produto`)
+  `descricao` varchar(145) DEFAULT NULL,
+  PRIMARY KEY (`id_produtos`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -36,7 +36,7 @@ CREATE TABLE `produtos` (
 
 LOCK TABLES `produtos` WRITE;
 /*!40000 ALTER TABLE `produtos` DISABLE KEYS */;
-INSERT INTO `produtos` VALUES (1,'Chocolate','Chocolate com Amendoim'),(2,'Fini','Fini sem açucar'),(3,'Fini','Fini com açucar');
+INSERT INTO `produtos` VALUES (1,'Alface','Alface Lisa'),(2,'Tomate','Tomate Cereja'),(3,'Cebola','Cebola Roxa');
 /*!40000 ALTER TABLE `produtos` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -49,4 +49,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-08-16  9:34:43
+-- Dump completed on 2017-08-21 20:45:49

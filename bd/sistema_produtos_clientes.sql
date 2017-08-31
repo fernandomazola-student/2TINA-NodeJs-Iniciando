@@ -24,13 +24,13 @@ DROP TABLE IF EXISTS `clientes`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `clientes` (
   `id_clientes` int(11) NOT NULL AUTO_INCREMENT,
-  `nome` varchar(45) DEFAULT NULL,
-  `sobrenome` varchar(45) DEFAULT NULL,
-  `cep` varchar(8) DEFAULT NULL,
-  `endereco` varchar(45) DEFAULT NULL,
-  `cpf` varchar(11) DEFAULT NULL,
+  `nome` varchar(150) DEFAULT NULL,
+  `sobrenome` varchar(245) DEFAULT NULL,
+  `cep` varchar(45) DEFAULT NULL,
+  `cpf` varchar(45) DEFAULT NULL,
+  `endereco` varchar(435) DEFAULT NULL,
   PRIMARY KEY (`id_clientes`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -39,7 +39,7 @@ CREATE TABLE `clientes` (
 
 LOCK TABLES `clientes` WRITE;
 /*!40000 ALTER TABLE `clientes` DISABLE KEYS */;
-INSERT INTO `clientes` VALUES (1,'Joao','Silva','12345678','Rua 0','12345678912'),(2,'Maria','Gomes','12345678','Rua 13','12345678912'),(3,'Anderson','BDB','12345678','Rua 13','12345678912'),(4,'Paulo','Souza','12345678','Rua 21','12345678912');
+INSERT INTO `clientes` VALUES (1,'Gustavo','Torrente','03344020','41052638945','Rua ABC');
 /*!40000 ALTER TABLE `clientes` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -52,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-08-16  9:34:44
+-- Dump completed on 2017-08-21 20:45:49

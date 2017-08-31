@@ -7,7 +7,7 @@ var conecMySQL = function(){
   return mysql.createConnection({
   host: 'localhost',
   user: 'root',
-  password: 'fiap',
+  password: '',
   database: 'sistema_produtos'
 });
 }
