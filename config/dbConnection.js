@@ -1,18 +1,18 @@
 var mysql = require('mysql');
 
-
-//COLOCAMOS NOSSA FUNÇÃO DE CONEXAO EM UMA VARIAVEL
-var conecMySQL = function(){
-// var connection = mysql.createConnection({
-  return mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: '',
-  database: 'sistema_produtos'
-});
+var conecMySQL = function() {
+  console.log('Conexao foi estabelecida');
+  return mysql.createConnection(
+  {
+    host : 'localhost',
+    user : 'root',
+    password : 'fiap',
+    database : 'sistema_produtos'
+  }
+);
 }
 
-module.exports = function(){
-  console.log('O AutoLoad carregou o módulo de conexão');
+module.exports = function(){ // abre funcao
+  console.log('O Autoload carregou o módulo de conexão');
   return conecMySQL;
-}
+} // fecha funcao
