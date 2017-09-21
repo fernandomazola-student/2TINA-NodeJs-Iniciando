@@ -1,3 +1,12 @@
 module.exports.index = function(app, req, res){
-  res.render('home/index');
+
+  var connection = app.config.dbConnection();
+  var ProdutosDAO = new app.app.models.ProdutosDAO(connection);
+
+  ProdutosDAO.get5UltimosProdutos(function(error, result){
+      console.log(result);
+      res.render('home/index', {produtos: result});
+  });
+
+
 }

@@ -14,6 +14,10 @@ ProdutosDAO.prototype.salvarProduto = function(produto, callback) {
 this._connection.query('INSERT INTO produtos SET ? ', produto, callback);
 }
 
+ProdutosDAO.prototype.get5UltimosProdutos = function(callback){
+  this._connection.query('SELECT * FROM produtos LIMIT 5', callback);
+}
+
 module.exports = function() {
 
 return ProdutosDAO;
